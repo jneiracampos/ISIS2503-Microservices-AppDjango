@@ -2,6 +2,7 @@ from django.db import models
 
 class Measurement(models.Model):
     variable = models.IntegerField(null=False, default=None)
+    place = models.IntegerField(null=False, default=None)
     value = models.FloatField(null=True, blank=True, default=None)
     unit = models.CharField(max_length=50)
     dateTime = models.DateTimeField(auto_now_add=True)
